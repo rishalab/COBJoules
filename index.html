@@ -220,7 +220,7 @@
                         </div>
                       </li>
                       <p>
-                        If the version is less than v3.0 then Cobjoules might
+                        If the version is less than 3.1.2 then Cobjoules might
                         not work properly
                       </p>
                       <!-- <div class="code-container">
@@ -329,7 +329,7 @@
                       <p>
                         Or you can try with one of our test scripts from
                         <a
-                          href="https://github.com/rishalab/CPPJoules/blob/main/test/test_multi.cpp"
+                          href="https://github.com/rishalab/COBJoules/blob/main/test/test.cbl"
                           target="_blank"
                           class="simple-link"
                           >here</a
@@ -339,7 +339,7 @@
                         Now compile the code with this code :
                         <div class="code-container">
                           <div class="code" id="codeToCopy7">
-                            g++ test.cpp -lCPP_Joules
+                            cobc -x -o executable test.cbl COBJoules/*.cbl
                           </div>
                           <button
                             class="copy-button"
@@ -352,7 +352,9 @@
                       <li>
                         And run it
                         <div class="code-container">
-                          <div class="code" id="codeToCopy8">sudo ./a.out</div>
+                          <div class="code" id="codeToCopy8">
+                            sudo ./executable
+                          </div>
                           <button
                             class="copy-button"
                             onclick="copyCode('codeToCopy8')"
@@ -365,9 +367,7 @@
                         You will get the output as :
                         <div class="output-container">
                           <div class="output" id="outputContent">
-                            Time 9.00326 <br />
                             core-0 8386636 <br />
-                            nvidia_gpu_0 164299 <br />
                             package-0 66858350 <br />
                             uncore-0 33936 <br />
                           </div>
